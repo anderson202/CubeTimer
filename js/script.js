@@ -1,10 +1,13 @@
 function timer(element) {
+    var lastTimer = 0;
     var time = 0;
     var interval;
     var offset;
+    var formattedTime;
+    
     function update() {
         time += delta();
-        var formattedTime = timeFormatter(time);
+        formattedTime = timeFormatter(time);
         element.textContent = formattedTime;
     }
     function delta() {
@@ -46,7 +49,16 @@ function timer(element) {
             clearInterval(interval);
             interval = null;
             this.isOn = false;
+            lastTime = time;
             time = 0;
         }
     };
+    
+    this.getTimeString = function() {
+        return element.textContent;
+    };
+    
+    this.getTime = function() {
+        return lastTime;
+    }
 }

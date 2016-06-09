@@ -10,6 +10,19 @@ html{
     
 }
 
-.verticalA{
-    
+#timer{
+    color: white;
+    font-size: 150px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#ao5{
+    color: white;
+    font-size: 50px;
+}
+
+#best{
+    color: white;
+    font-size: 50px;
 }
