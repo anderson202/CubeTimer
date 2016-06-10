@@ -1,6 +1,7 @@
 var time = document.getElementById('timer');
 var ao5 = document.getElementById('ao5');
 var bestSolveTime = document.getElementById('best');
+var timeTable = document.getElementById('timeTable');
 
 var watch = new timer(time); //timer object for the main timer
 
@@ -23,18 +24,20 @@ document.addEventListener('keyup', function(event){
     }
 });
 
+var timePosition = 0;
 //End of solve
 document.addEventListener('keydown', function(event){
     if(event.keyCode == 32){
         if(watch.isOn) {
             watch.stop();
-            if (avgQueue.length >= 5){
+            //avg of 5 needs a bit of fixing
+            /*if (avgQueue.length >= 5){
                 var avgOf5 = (avgQueue.slice(0,5).reduce(function(previousValue, currentValue) {
                   return previousValue + currentValue;
                 }));
                 console.log(avgOf5);
                 ao5.textContent = "Avg of 5: " + avgOf5;
-            }
+            }*/
             if (avgQueue.length >= 10){
                 avgQueue.shift();
             }
@@ -43,6 +46,12 @@ document.addEventListener('keydown', function(event){
                 bestTime = watch.getTime();
                 bestSolveTime.textContent = "Best Time: "+ watch.getTimeString();
             }
+            
+            var row = timeTable.insertRow(0);
+            var cell = row.insertCell(0);
+            cell.innerHTML = (timePosition + 1).toString() + ". " + watch.getTimeString();
+            timePosition++;
+            
         }
     }
 });

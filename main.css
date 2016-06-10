@@ -2,27 +2,47 @@ html{
     background-color:#504D4D;
 }
 
-.horizontalA{
-    background-color:#FF2E63;
-    height: 50px;
-    width: 200px;
-    margin: 0 auto;
-    
+.table, td, th{
+    width: 30%;
+    color: white;
+    text-align: center;
 }
 
 #timer{
     color: white;
     font-size: 150px;
-    margin: 0 auto;
+    margin-top: 200px;
     text-align: center;
 }
 
 #ao5{
     color: white;
     font-size: 50px;
+    float: left;
 }
 
 #best{
     color: white;
     font-size: 50px;
+    text-align: center;
+    
+}
+
+
+#solveBox{
+    margin: 0 auto;
+    height: 300px;
+    width: 100%;
+    background-color: black;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#results{
+    color: white;
+    text-align: center;
+    background-color: red;
+    height: 400px;
+    width: 200px;
+    float:right;
 }
