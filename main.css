@@ -2,6 +2,11 @@ html{
     background-color:#504D4D;
 }
 
+.body{
+    height: 100%;
+    width: 100%;
+}
+
 .table, td, th{
     width: 30%;
     color: white;
@@ -13,6 +18,11 @@ html{
     font-size: 150px;
     margin-top: 200px;
     text-align: center;
+    font-family: lcd;
+}
+
+#timerBox{
+    margin: 0 auto;
 }
 
 #ao5{
@@ -40,9 +50,17 @@ html{
 
 #results{
     color: white;
+    display: inline-block;
     text-align: center;
-    background-color: red;
-    height: 400px;
-    width: 200px;
-    float:right;
+    background-color: grey;
+    height: 100%;
+    width: 300px;
+    right: 0px;
+    top: 0px;
+    position: fixed;
+}
+
+@font-face{
+    font-family:lcd;
+    src:url("lcd");
 }

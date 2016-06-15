@@ -11,6 +11,12 @@ var avgQueue = []; //queue for all solve times (up to 10 currently)
 var ready = true; //signifies whether timer is ready to start
 var bestTime = Infinity;
 
+window.onkeydown = function(event){
+    if(event.keyCode == 32 && e.target == document.body){
+        event.preventDefault();
+        return false;
+    }
+};
 
 //Begin Solve
 document.addEventListener('keyup', function(event){
